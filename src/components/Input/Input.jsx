@@ -1,5 +1,6 @@
+import '../../index.css';
 export const Input = () => { 
     return (
-        <input type="text" placeholder="Text..."/>
+        <input className='input' type="text" placeholder="Title..."/>
     )
 }

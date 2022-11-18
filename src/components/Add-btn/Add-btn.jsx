@@ -1,5 +1,8 @@
+
+import '../../index.css';
+
 export const AddBtn = () => {
     return (
-    <button type="button">Add</button>
+    <button className='addBtn' type="button">Add</button>
 )
 }
