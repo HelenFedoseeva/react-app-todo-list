@@ -1,6 +1,6 @@
 import { Input } from "components/Input/Input"
 import { AddBtn } from "components/Add-btn/Add-btn"
-import '../../index.css';
+import '../index.css';
 
 
 export const Section = () => {
