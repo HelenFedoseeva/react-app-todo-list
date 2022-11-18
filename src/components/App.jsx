@@ -1,16 +1,21 @@
+import { Input } from "./Input/Input";
+import { AddBtn } from "./Add-btn/Add-btn";
+
 export const App = () => {
   return (
     <div
-      style={{
-        height: '100vh',
+     style= {{
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
+        color: '#010101',
+         fontSize: 30,
       }}
     >
-      React homework template
+      My To Do List
+      <Input />
+      <AddBtn
+        style={{
+          width: '150px',
+        }} />
     </div>
   );
 };
