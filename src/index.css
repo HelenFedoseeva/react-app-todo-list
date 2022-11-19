@@ -19,6 +19,11 @@ ul {
   list-style: none;
 }
 
+.container{
+  width: 700px;
+  margin: 0 auto;
+}
+
 .header__wrapper{
   background-color: #f44336;
     padding: 30px 40px;
@@ -66,7 +71,7 @@ background: #f9f9f9;
     /* position: relative; */
     margin-top: 0px;
     margin-bottom: 0px;
-    padding: 12px 8px 12px 40px;
+    padding: 12px 8px 12px 28px;
     list-style-type: none;
     background: #eee;
     font-size: 18px;

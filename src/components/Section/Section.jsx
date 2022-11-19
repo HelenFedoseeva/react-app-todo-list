@@ -7,12 +7,14 @@ import '../../index.css';
 export const Section = () => {
     return (
         <section>
-             <div className="header__wrapper">
-                <h1 className="title">My To Do List</h1>
+                <div className="header__wrapper">
+                <div className="container">
+                    <h1 className="title">My To Do List</h1>
                 <Input/>
                 <AddBtn/>
+                </div>
             </div>
-            <ToDoList/>
+                 <ToDoList/>
         </section>
     )
 }
