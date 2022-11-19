@@ -1,16 +1,18 @@
 import { Input } from "components/Input/Input"
 import { AddBtn } from "components/Add-btn/Add-btn"
+import { ToDoList } from "components/ToDoList/ToDoList";
 import '../../index.css';
 
 
 export const Section = () => {
     return (
-        <>
-        <div className="header__wrapper">
-            <h1 className="title">My To Do List</h1>
-            <Input/>
-            <AddBtn/>
-        </div>
-        </>
+        <section>
+             <div className="header__wrapper">
+                <h1 className="title">My To Do List</h1>
+                <Input/>
+                <AddBtn/>
+            </div>
+            <ToDoList/>
+        </section>
     )
 }

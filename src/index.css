@@ -64,7 +64,8 @@ background: #f9f9f9;
 
 .list{
     /* position: relative; */
-
+    margin-top: 0px;
+    margin-bottom: 0px;
     padding: 12px 8px 12px 40px;
     list-style-type: none;
     background: #eee;
@@ -90,6 +91,10 @@ background: #f9f9f9;
   background: #f9f9f9;
 }
 
+.list__item:nth-child(odd):hover{
+  background-color: #ddd;
+}
+
 .list__item.checked {
   background: #888;
   color: #fff;
@@ -111,4 +116,30 @@ background: #f9f9f9;
  
   height: 15px;
   width: 7px;
+}
+
+.closeBtn{
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  border: none;
+  height: 100%;
+  width: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+
+  padding: 12px 16px 12px 16px;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(84, 83, 83);
+  transition: 250ms;
+}
+
+.closeBtn:hover{
+  background-color: #f44336;
+  color: #fff;
 }
