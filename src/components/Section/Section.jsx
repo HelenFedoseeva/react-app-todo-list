@@ -5,6 +5,8 @@ import '../../index.css';
 
 
 export const Section = () => {
+
+
     return (
         <section>
                 <div className="header__wrapper">
