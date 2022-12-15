@@ -2,13 +2,15 @@ import '../../index.css';
 import React from 'react';
 
 
-export const Input = () => { 
+export const Input = ({onChange}) => { 
     
-    let inputValue = React.createRef()
+    const handleValueChange = (event) => {
+       onChange(event.target.value)
+   }
 
    
 
     return (
-        <input className='input' type="text" ref={inputValue} placeholder="Title..."/>
+        <input className='input' type="text" placeholder="Title..." onChange={handleValueChange}/>
     )
 }
