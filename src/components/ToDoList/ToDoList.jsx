@@ -16,10 +16,12 @@ export const ToDoList = ({ value }) => {
      
 
         const index = e.nativeEvent.target.offsetParent
+        console.log(index)
+        const siblingIndex = e.nativeEvent.target.offsetParent.nextSibling
         noteArr.splice(index, 1)
-        
+        console.log(noteArr)
         setArray([...noteArr])
-
+        // console.log(noteArr)
     }
     
     function handleListItemClick(e) {
