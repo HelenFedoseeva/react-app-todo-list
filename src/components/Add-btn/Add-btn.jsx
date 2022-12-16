@@ -1,15 +1,28 @@
 
+import { useState } from 'react';
 import '../../index.css';
 
-export const AddBtn = () => {
-    
-    function onAddBtnClick() {
-    //     if (value === '' || value === ' ') {
-    //      alert ('Add a note, please')
-    //   } console.log(123)
-    }
+export const AddBtn = ({onClick}) => {
 
+    const [count, setCount] = useState(0)
+
+    // const handleOnAddBtnClick = () => {
+    //     let clickCount = count;
+    //     clickCount ++;
+    //     setCount(clickCount)
+    // }
+
+    const handleBtnChange = (e) => {
+        let click = count;
+        click++;
+        setCount(click)
+        onClick(click)
+   
+    }
+    
     return (
-        <button onClick={onAddBtnClick} className='addBtn' type="button">Add</button>
+      
+            <button onClick={handleBtnChange}  className='addBtn' type="button">Add</button>
+        
 )
 }

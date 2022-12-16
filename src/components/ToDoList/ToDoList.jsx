@@ -1,17 +1,22 @@
 import { useState } from 'react';
 import '../../index.css';
 
-export const ToDoList = ({ value }) => { 
+export const ToDoList = ({ value, click }) => { 
     const [noteArr, setArray] = useState(['Hit the gym', 'Pay bills', 'Buy pizza','Organize the Trello for tomorrow'])
     
+
     const listValue = String(value.trim())
 
-    if (listValue !== '') {
-        noteArr.push(listValue)
-    }
+    if (click > 1 && listValue !== '') {
+        noteArr.push(listValue) 
+  
+    } 
+    
     const markupList = noteArr.map((elem, index) =>{return (<li onClick={handleListItemClick} key={index} className='list__item'>{elem}
-            <button onClick={handleCloseBtnClick} className='closeBtn' type='button'>×</button></li>)} )
+      <button onClick={handleCloseBtnClick} className='closeBtn' type='button'>×</button></li>)
+  })
  
+    
     function handleCloseBtnClick(e) {
      
 
@@ -35,7 +40,7 @@ export const ToDoList = ({ value }) => {
 
     return (
         <ul className='list'>
-            {markupList}
+           { markupList}
         </ul>
     )
 }
