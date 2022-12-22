@@ -3,11 +3,11 @@ import React from 'react';
 import { useState } from 'react';
 
 
-export const Input = ({ onChange, click }) => { 
-    const [count, setCount] = useState(0)
+export const Input = ({ onChange}) => { 
     
-    console.log(click)
-    console.log(count)
+    
+    // console.log(click)
+    // console.log(count)
 
     // function clearInputValue(click) {
     //     if (click !== count) {
