@@ -6,21 +6,24 @@ export const ToDoList = ({ value, click }) => {
     
 
     const listValue = String(value.trim())
+   
 
-    if (click > 1 && listValue !== '') {
+    if (click && listValue !== '') {
+        
         noteArr.push(listValue) 
-  
+       
     } 
     
-    const markupList = noteArr.map((elem, index) =>{return (<li onClick={handleListItemClick} key={index} className='list__item'>{elem}
+      const markupList = noteArr.map((elem, index) =>{return (<li onClick={handleListItemClick} key={index} id={index} className='list__item'>{elem}
       <button onClick={handleCloseBtnClick} className='closeBtn' type='button'>×</button></li>)
   })
+  
  
     
     function handleCloseBtnClick(e) {
      
 
-        const index = e.nativeEvent.target.offsetParent
+        const index = e.target.offsetParent.id
         console.log(index)
         const siblingIndex = e.nativeEvent.target.offsetParent.nextSibling
         noteArr.splice(index, 1)

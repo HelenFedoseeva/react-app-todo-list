@@ -13,6 +13,7 @@ export const AddBtn = ({onClick}) => {
     // }
 
     const handleBtnChange = (e) => {
+        
         let click = count;
         click++;
         setCount(click)
@@ -22,7 +23,7 @@ export const AddBtn = ({onClick}) => {
     
     return (
       
-            <button onClick={handleBtnChange}  className='addBtn' type="button">Add</button>
+            <button onClick={handleBtnChange}  className='addBtn' type="submit">Add</button>
         
 )
 }

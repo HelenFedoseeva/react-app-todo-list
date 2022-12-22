@@ -9,8 +9,7 @@ import '../../index.css';
 export const Section = () => {
     const [value, setValue] = useState('')
     const [click, setClick] = useState(0)
-
-    console.log(click)
+   
 
     const handleValueChange = (value) => {
         setValue(value)
@@ -30,7 +29,7 @@ export const Section = () => {
             <div className="header__wrapper">
                 <div className="container">
                     <h1 className="title">My To Do List</h1>
-                    <Input onChange={handleValueChange}/>
+                    <Input click={click}   onChange={handleValueChange}/>
                     <AddBtn onClick={handleBtnChange}/>
                 </div>
             </div>

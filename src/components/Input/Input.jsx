@@ -1,16 +1,30 @@
 import '../../index.css';
 import React from 'react';
+import { useState } from 'react';
 
 
-export const Input = ({onChange}) => { 
+export const Input = ({ onChange, click }) => { 
+    const [count, setCount] = useState(0)
     
+    console.log(click)
+    console.log(count)
+
+    // function clearInputValue(click) {
+    //     if (click !== count) {
+    //         count += 1
+            
+    //     } setCount(count)
+    // }
     const handleValueChange = (event) => {
-       onChange(event.target.value)
+        onChange(event.target.value)
+      
+       
    }
 
    
+   
 
     return (
-        <input className='input' type="text" placeholder="Title..." onChange={handleValueChange}/>
+        <input className='input' type="text" placeholder="Enter your note here..." onChange={handleValueChange}/>
     )
 }
