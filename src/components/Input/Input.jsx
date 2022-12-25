@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 
 
-export const Input = ({ onChange}) => { 
+export const Input = ({ addTodo}) => { 
     
     
     // console.log(click)
@@ -15,16 +15,16 @@ export const Input = ({ onChange}) => {
             
     //     } setCount(count)
     // }
-    const handleValueChange = (event) => {
-        onChange(event.target.value)
+//     const handleValueChange = (event) => {
+//         onChange(event.target.value)
       
        
-   }
+//    }
 
    
    
 
     return (
-        <input className='input' type="text" placeholder="Enter your note here..." onChange={handleValueChange}/>
+        <input className='input' type="text" placeholder="Enter your note here..." onChange={(e)=> {addTodo(e.target.value)}}/>
     )
 }
