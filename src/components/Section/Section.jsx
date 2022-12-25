@@ -45,14 +45,7 @@ export const Section = () => {
     }
 
 
-    const addTodo = (title) => {
-        setTodos([...todos, {
-            title: title,
-            id: Date.now(),
-            isCompleted: false,
-        }])
-
-   }
+   
 
 
     return (
@@ -60,7 +53,7 @@ export const Section = () => {
             <div className="header__wrapper">
                 <div className="container">
                     <h1 className="title">My To Do List</h1>
-                    <Input  addTodo={addTodo} />
+                    <Input  setTodos={setTodos} />
                     <AddBtn />
                 </div>
             </div>
