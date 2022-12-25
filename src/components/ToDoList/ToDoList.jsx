@@ -3,7 +3,7 @@ import '../../index.css';
 
 
 
-export const ToDoList = ({ todo, changeTodo }) => { 
+export const ToDoList = ({ todo, changeTodo, removeTodo }) => { 
 
 //     const [noteArr, setArray] = useState(['Hit the gym', 'Pay bills', 'Buy pizza','Organize the Trello for tomorrow'])
     
@@ -44,10 +44,10 @@ export const ToDoList = ({ todo, changeTodo }) => {
 //     }
 
     return (
-        <div className={`list__item ${todo.isCompleted ? 'checked' : ''}`} onClick={()=> {changeTodo(todo.id)}}>
-             <li >{todo.title}
-            <button className='closeBtn' type='button'>×</button>
+       
+             <li className={`list__item ${todo.isCompleted ? 'checked' : ''}`} onClick={()=> {changeTodo(todo.id)}} >{todo.title}
+            <button  className='closeBtn' type='button' onClick={()=> {removeTodo(todo.id)}}>×</button>
         </li>
-       </div>
+      
     )
 }

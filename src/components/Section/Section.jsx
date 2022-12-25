@@ -22,11 +22,10 @@ import '../../index.css';
 }]
 
 export const Section = () => {
-    const [value, setValue] = useState('')
-    const [click, setClick] = useState(0)
-
-    const [todos, setTodos] = useState(toDoArray)
    
+    const [todos, setTodos] = useState(toDoArray)
+  
+    
    
     const changeTodo = (id) => {
         const copyArr = [...todos]
@@ -36,17 +35,15 @@ export const Section = () => {
       
     }
 
-
-
-    const handleValueChange = (value) => {
-        setValue(value)
-
+    const removeTodo = (id) => {
+    
+        //need a bugfix
+        const copyArr = [...todos]
+        const updatedArr = copyArr.filter(t =>  t.id !== id)
+        setTodos(updatedArr)
+    
     }
 
-    const handleBtnChange = (click) => { 
-        
-        setClick(click)
-    }
 
    
 
@@ -56,12 +53,12 @@ export const Section = () => {
             <div className="header__wrapper">
                 <div className="container">
                     <h1 className="title">My To Do List</h1>
-                    <Input click={click}   onChange={handleValueChange}/>
-                    <AddBtn onClick={handleBtnChange}/>
+                    <Input   />
+                    <AddBtn />
                 </div>
             </div>
             <ul className="list">
-                {todos.map(todo => <ToDoList key={todo.id} todo={todo} changeTodo={ changeTodo } />)}
+                {todos.map(todo => <ToDoList key={todo.id} todo={todo} changeTodo={ changeTodo } removeTodo={removeTodo} />)}
             </ul>
             
         </section>
