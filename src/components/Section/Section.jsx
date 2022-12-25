@@ -46,7 +46,6 @@ export const Section = () => {
 
 
     const addTodo = (title) => {
-        console.log(title)
         setTodos([...todos, {
             title: title,
             id: Date.now(),
