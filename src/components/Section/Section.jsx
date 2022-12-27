@@ -67,7 +67,7 @@ export const Section = () => {
                 <div className="container">
                     <h1 className="title">My To Do List</h1>
                     <Input  setTodos={setTodos} />
-                    <AddBtn />
+                    {/* <AddBtn /> */}
                 </div>
             </div>
             <ul className="list">

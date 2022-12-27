@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import '../../index.css';
 
-export const AddBtn = ({onClick}) => {
+export const AddBtn = () => {
 
    
    
