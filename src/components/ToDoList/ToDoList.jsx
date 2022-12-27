@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import '../../index.css';
 
@@ -5,10 +6,10 @@ import '../../index.css';
 
 export const ToDoList = ({ todo, changeTodo, todos, setTodos}) => { 
 
-    // console.log(todo)
+
+      
 
        const removeTodo = (id) => {
-//    console.log(todos)
 //         //need a bugfix
        const copyArr =[...todos]
       
@@ -18,7 +19,7 @@ export const ToDoList = ({ todo, changeTodo, todos, setTodos}) => {
         copyArr.splice(index, 1)
         console.log(copyArr)
         
-        setTodos(copyArr)
+           setTodos(copyArr)
         console.log(todos)
         
     

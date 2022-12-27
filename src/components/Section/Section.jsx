@@ -5,6 +5,7 @@ import { useState } from "react";
 import '../../index.css';
 
 
+
  export const toDoArray = [{
     title: 'Hit the gym',
     id: 'dgdg46',
@@ -24,6 +25,8 @@ import '../../index.css';
 export const Section = () => {
    
     const [todos, setTodos] = useState(toDoArray)
+
+
   
     
    
