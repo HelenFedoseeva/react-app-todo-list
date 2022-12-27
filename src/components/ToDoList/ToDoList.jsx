@@ -11,17 +11,18 @@ export const ToDoList = ({ todo, changeTodo, todos, setTodos}) => {
 
        const removeTodo = (id) => {
 //         //need a bugfix
-       const copyArr =[...todos]
+    //    const copyArr =[...todos]
       
-        const elemToDelete = copyArr.find(t => t.id === id)
-        const index = copyArr.indexOf(elemToDelete)
+    //     const elemToDelete = copyArr.find(t => t.id === id)
+    //     const index = copyArr.indexOf(elemToDelete)
      
-        copyArr.splice(index, 1)
-        console.log(copyArr)
+    //     copyArr.splice(index, 1)
+    //     console.log(copyArr)
         
-           setTodos(copyArr)
-        console.log(todos)
-        
+    //        setTodos(copyArr)
+    //     console.log(todos)
+           console.log(123)
+           setTodos([...todos].filter(t => t.id !== id))
     
     }
 
