@@ -3,45 +3,28 @@ import '../../index.css';
 
 
 
-export const ToDoList = ({ todo, changeTodo, removeTodo }) => { 
+export const ToDoList = ({ todo, changeTodo, todos, setTodos}) => { 
 
-//     const [noteArr, setArray] = useState(['Hit the gym', 'Pay bills', 'Buy pizza','Organize the Trello for tomorrow'])
-    
+    // console.log(todo)
 
-//     const listValue = String(value.trim())
-   
-
-//     if (click && listValue !== '') {
-        
-//         noteArr.push(listValue) 
-       
-//     } 
-    
-//       const markupList = noteArr.map((elem, index) =>{return (<li onClick={handleListItemClick} key={index} id={index} className='list__item'>{elem}
-//       <button onClick={handleCloseBtnClick} className='closeBtn' type='button'>×</button></li>)
-//   })
-  
- 
-    
-    // function handleCloseBtnClick(e) {
+       const removeTodo = (id) => {
+//    console.log(todos)
+//         //need a bugfix
+       const copyArr =[...todos]
+      
+        const elemToDelete = copyArr.find(t => t.id === id)
+        const index = copyArr.indexOf(elemToDelete)
      
-
-    //     const index = e.target.offsetParent.id
-   
-    //     const siblingIndex = e.nativeEvent.target.offsetParent.nextSibling
-    //     noteArr.splice(index, 1)
-    //     setArray([...noteArr])
-
-    // }
-    
-//     function handleListItemClick(e) {
-//         if (e.target.classList.contains('checked')) {
-//             e.target.classList.remove('checked')
+        copyArr.splice(index, 1)
+        console.log(copyArr)
         
-//             return
-//         }
-//         e.target.classList.add('checked')
-//     }
+        setTodos(copyArr)
+        console.log(todos)
+        
+    
+    }
+
+
 
     return (
        

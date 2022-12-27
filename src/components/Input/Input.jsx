@@ -7,8 +7,14 @@ export const Input = ({ setTodos}) => {
     const [title, setTitle] = useState('')
     
     const addTodo = (title) => {
+        const value = title.trim()
+
+        if (value === '') {
+            alert('Enter a note, please')
+            return
+        }
         setTodos(prev => [{
-            title: title,
+            title: value,
             id: Date.now(),
             isCompleted: false,
         },

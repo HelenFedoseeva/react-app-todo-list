@@ -35,14 +35,24 @@ export const Section = () => {
       
     }
 
-    const removeTodo = (id) => {
+//     const removeTodo = (id) => {
+// //    console.log(todos)
+// //         //need a bugfix
+//        const copyArr =[...todos]
+      
+//         const elemToDelete = copyArr.find(t => t.id === id)
+        
+//         const index = copyArr.indexOf(elemToDelete)
+//        console.log(index)
+     
+//         copyArr.splice(index, 1)
+//         console.log(copyArr)
+        
+//         setTodos(copyArr)
+//         console.log(todos)
+        
     
-        //need a bugfix
-        const copyArr = [...todos]
-        const updatedArr = copyArr.filter(t =>  t.id !== id)
-        setTodos(updatedArr)
-    
-    }
+//     }
 
 
    
@@ -58,7 +68,7 @@ export const Section = () => {
                 </div>
             </div>
             <ul className="list">
-                {todos.map(todo => <ToDoList key={todo.id} todo={todo} changeTodo={ changeTodo } removeTodo={removeTodo} />)}
+                {todos.map(todo => <ToDoList key={todo.id} todo={todo} changeTodo={ changeTodo } todos={todos} setTodos={setTodos} />)}
             </ul>
             
         </section>
