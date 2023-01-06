@@ -11,6 +11,7 @@ export const ToDoList = ({ todo, changeTodo, todos, setTodos}) => {
 
        const removeTodo = (id) => {
 //         //need a bugfix
+           
     //    const copyArr =[...todos]
       
     //     const elemToDelete = copyArr.find(t => t.id === id)
