@@ -1,5 +1,4 @@
 import { Input } from "components/Input/Input"
-import { AddBtn } from "components/Add-btn/Add-btn"
 import { ToDoList } from "components/ToDoList/ToDoList";
 import { useState } from "react";
 import '../../index.css';
@@ -67,13 +66,11 @@ export const Section = () => {
                 <div className="container">
                     <h1 className="title">My To Do List</h1>
                     <Input  setTodos={setTodos} />
-                    {/* <AddBtn /> */}
                 </div>
             </div>
             <ul className="list">
                 {todos.map(todo => <ToDoList key={todo.id} todo={todo} changeTodo={ changeTodo } todos={todos} setTodos={setTodos} />)}
             </ul>
-            
         </section>
     )
 }
